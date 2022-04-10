@@ -2,11 +2,13 @@ package main
 
 import (
 	"fmt"
-
-	"constraints"
 )
 
-func min[T constraints.Ordered](values []T) (T, error) {
+type Ordered interface {
+	int | float64 | string
+}
+
+func min[T Ordered](values []T) (T, error) {
 	if len(values) == 0 {
 		var zero T
 		return zero, fmt.Errorf("min of empty slice")
