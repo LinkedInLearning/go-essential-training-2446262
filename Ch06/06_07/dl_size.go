@@ -18,7 +18,7 @@ import (
 )
 
 var (
-	urlTemplate = "https://s3.amazonaws.com/nyc-tlc/trip+data/%s_tripdata_2020-%02d.csv"
+	urlTemplate = "https://d37ci6vzurychx.cloudfront.net/trip-data/%s_tripdata_2020-%02d.parquet"
 	colors      = []string{"green", "yellow"}
 )
 
